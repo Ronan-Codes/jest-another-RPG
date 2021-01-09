@@ -73,10 +73,10 @@ test("gets player's attack value", () => {
     player.strength = 10;
 
     expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
-    expect(player.getAttackValue()).toBeGreaterThanOrEqual(15);
+    expect(player.getAttackValue()).toBeLessThanOrEqual(15);
 });
 
-tests('adds a potion to the inventory', () => {
+test('adds a potion to the inventory', () => {
     const player = new Player('David');
     const oldCount = player.inventory.length;
 
